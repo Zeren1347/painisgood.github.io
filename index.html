@@ -1,81 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel = "stylesheet" href = "styles.css">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luck Page</title>
-  <link rel="shortcut icon" href="logoforweb.png" type="image/x-icon">
-  <style>
-    body {
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    .container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url('https://images.unsplash.com/photo-1533284133567-0da9844151ce?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFjZSUyMGhvcnNlfGVufDB8fDB8fHww');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    h1 {
-      font-size: 10rem;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    a {
-      padding: 15px 20px;
-      background: #52caee;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #333333;
-      border-radius: .25rem;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.808)
-    }
-  </style>
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMTSB9HLGY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FMTSB9HLGY');
-</script>
-
-<body>
-  <div class="container">
-    <h2>You are lucky man!</h2>
-    <p>Try your luck again later.</p>
-    <p><a href="#">Don't click nothing happens</a></p>
-  </div>
-</body>
-
+    <body>
+        <div id = "display">
+            <div id = "displayinput">
+                <input type = "text" value = "" disabled id = "displayvalue">
+                <span id = "textCursor">| </span>
+            </div>
+            <input type = "text" disabled id = "displayresultvalue">
+        </div>
+        <div id = "toggle">
+            <button id = "expand_button" onclick = "expandButton()"><img src = "https://fonts.gstatic.com/s/i/materialiconsoutlined/expand_more/v12/24px.svg" alt = "Show Keypads" id = "expand_icon"></button>
+        </div>
+        <div id = "buttons">
+            <button id = "btn_7" class = "operand">7</button>
+            <button id = "btn_8" class = "operand">8</button>
+            <button id = "btn_9" class = "operand">9</button>
+            <button id = "backspace"><img src = "https://fonts.gstatic.com/s/i/materialiconsoutlined/backspace/v11/24px.svg" alt = "<x]" id = "backspace_icon"></button>
+            <button id = "btn_4" class = "operand">4</button>
+            <button id = "btn_5" class = "operand">5</button>
+            <button id = "btn_6" class = "operand">6</button>
+            <button id = "btn_divide" class = "operator">÷</button>
+            <button id = "btn_1" class = "operand">1</button>
+            <button id = "btn_2" class = "operand">2</button>
+            <button id = "btn_3" class = "operand">3</button>
+            <button id = "btn_multiply" class = "operator">×</button>
+            <button id = "btn_0" class = "operand">0</button>
+            <button id = "btn_period" class = "operand">.</button>
+            <button id = "btn_subtract" class = "operator">-</button>
+            <button id = "btn_equal" class = "equal">=</button>
+            <button id = "btn_clear" class = "clear">AC</button>
+            <button id = "btn_add" class = "operator">+</button>
+        </div>
+    </body>
 </html>
+
+<script src = "scripts.js"></script>

@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    background-image: url(bgimg.jpg);
+    #buttons,
+    input,
+    #displayinput,
+    #displayresultvalue,
+    #toggle 
+    {
+        background-color: transparent;
+    }
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    align-items: flex-start; 
+}
+
+#header{
+    float: left;
+    color: lightgrey;
+    background-color: transparent;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+#header a:link{
+    color: #4285F4;
+    text-decoration: none;
+}
+
+#header a:visited{
+    color: #4285F4;
+    text-decoration: none;
+}
+
+@keyframes hideKeypad{
+    from {
+        position: relative;
+        bottom: 0%;
+        opacity: 100%
+    }
+    to {
+        position: relative;
+        bottom: 100%;
+        opacity: -150%
+    }
+}
+
+@keyframes showKeypad{
+    from {
+        position: relative;
+        bottom: 100%;
+        opacity: -150%
+    }
+    to {
+        position: relative;
+        bottom: 0%;
+        opacity: 100%
+    }
+}
+
+#buttons{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 30%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    bottom: 150%;
+}
+
+input{
+    font-size: 50px;
+    text-align: right;
+    width: 65%;
+    background-color: transparent;
+    color: lightgrey;
+    border: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+#displayinput{
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+#displayresultvalue{
+    font-size: 50px;
+    color: grey;
+}
+
+@keyframes blinking{
+    0%{opacity: 100%;}
+    50%{opacity: 0%;}
+}
+
+button{
+    font-size: 50px;
+    background-color: #202020;
+    border: 0px;
+    color: lightgrey;
+    font-family: "Roboto", sans-serif;
+}
+
+img{
+    filter: invert(100%);
+    width: 50px;
+}
+
+#toggle{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 10%;
+}
+
+#expand_button{
+    height: 100px;
+    width: 100%;
+    background-color: #181818;
+}
+
+#btn_equal{
+    grid-column: 1 / 3;
+    background-color: #4285F4;
+}
+
+#btn_add{
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+}
+
+.operand{
+    background-color: #151515;
+}
+
+#btn_subtract{
+    background-color: #151515;
+}
+
+#btn_clear{
+    background-color: #151515;
+}
