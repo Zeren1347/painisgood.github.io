@@ -3,14 +3,6 @@ body{
     align-items: left;
     flex-direction: column;
     background-image: url(bgimg.jpg);
-    #buttons,
-    input,
-    #displayinput,
-    #displayresultvalue,
-    #toggle 
-    {
-        background-color: transparent;
-    }
     width: 100%;
     height: 100%;
     font-family: "Roboto", sans-serif;
@@ -123,7 +115,7 @@ img{
 #expand_button{
     height: 100px;
     width: 100%;
-    background-color: #181818;
+    background-color: transparent;
 }
 
 #btn_equal{
